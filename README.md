@@ -73,9 +73,9 @@ Time spent: **7** hours spent in total
 The following **required** functionality is completed:
     
 - [x] User can tap a cell to see a detail view (+5pts)
-    - [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView (+5pts)
+- [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView (+5pts)
     
-    The following **stretch** features are implemented:
+  The following **stretch** features are implemented:
     
     - [x] User can tap a poster in the collection view to see a detail screen of that movie (+3pts)
     - [ ] In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer (+3pts)
@@ -97,7 +97,7 @@ The following **required** functionality is completed:
     
     Here's a walkthrough of implemented user stories:
     
-    <img src='https://imgur.com/a/vqe5D.gif' width='' alt='Video Walkthrough' />
+    <img src='https://imgur.com/Ftm1RQV.gif' width='' alt='Video Walkthrough' />
     
     GIF created with [LiceCap](http://www.cockos.com/licecap/).
     
