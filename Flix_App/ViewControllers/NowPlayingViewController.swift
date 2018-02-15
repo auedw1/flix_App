@@ -64,9 +64,6 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
-        
-        
-        
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
         let overview = movie["overview"] as! String
@@ -81,6 +78,28 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    func alert (title: String, message: String) {
+        let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
+        // create a cancel action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            // handle cancel response here. Doing nothing will dismiss the view.
+        }
+        // add the cancel action to the alertController
+        alertController.addAction(cancelAction)
+        
+        // create an OK action
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            // handle response here.
+        }
+        // add the OK action to the alert controller
+        alertController.addAction(OKAction)
+        
+        present(alertController, animated: true) {
+            // optional code for what happens after the alert controller has finished presenting
+        }
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
         if let indexPath = tableView.indexPath(for: cell) {
@@ -89,6 +108,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
             detailViewController.movie = movie
         }
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
